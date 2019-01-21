@@ -1,4 +1,4 @@
 var toolkit = require("index.js");
 
 toolkit.ArgumentParser.AddParameter("--test");
-toolkit.ArgumentParser.Parse()
+console.log(toolkit.ArgumentParser.Parse("--test hello"))
