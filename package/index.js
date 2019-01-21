@@ -1,2 +1,2 @@
-var mergedirs = rquire("merge-dirs")
+var mergedirs = require("merge-dirs")
 mergedirs("../bin", "../../..", "skip")
