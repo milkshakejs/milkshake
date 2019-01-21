@@ -1,5 +1,9 @@
 var toolkit = {};
 
-toolkit.arguments
+toolkits.ArgumentParser = {
+  Parse: function(arguments) {
+    
+  }
+}
 
 module.exports = toolkit;
