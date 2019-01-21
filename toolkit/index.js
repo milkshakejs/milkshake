@@ -1,9 +1,10 @@
 var toolkit = {};
 
-toolkit.parse = function(args) {
-  if(!typeof args == "string") {
-    
+toolkit.parse = function(arguments) {
+  var args;
+  if(!typeof arguments == "string") {
+
   }
-}
+};
 
 module.exports = toolkit;
