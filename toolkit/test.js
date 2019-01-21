@@ -1,3 +1,3 @@
 var toolkit = require("index.js");
 
-toolkit.
+toolkit.ArgumentParser.AddParameter("--test");

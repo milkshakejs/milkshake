@@ -11,6 +11,7 @@ toolkits.ArgumentParser = {
         result[args[i].split("-").join("")] = args[i+1]
       }
     }
+    return result
   },
   Parameters: {
 
