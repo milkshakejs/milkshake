@@ -1,1 +1,3 @@
-var toolkit = require("index.js")
+var toolkit = require("index.js");
+
+toolkit.

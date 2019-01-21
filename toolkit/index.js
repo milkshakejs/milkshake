@@ -11,6 +11,15 @@ toolkits.ArgumentParser = {
         result[args[i].split("-").join("")] = args[i+1]
       }
     }
+  },
+  Parameters: {
+
+  },
+  AddParameter: function(key) {
+    toolkits.ArgumentParser.Parameters[key] = true;
+  },
+  ToggleParameter: function(key) {
+    toolkits.ArgumentParser.Parameters[key] = !toolkits.ArgumentParser.Parameters[key];
   }
 }
 
