@@ -1,4 +1,8 @@
-var md = require("merge-dirs");
-var path = require("path");
+var gulp = require('gulp'),
+    es = require('event-stream');
 
-md("../bin", process.cwd())
+gulp.task('web_dev', function () {
+    es.merge(gulp.src(path.resolve("../bin")),
+            gulp.src(process.cwd()))
+            .pipe(gulp.dest('out'));
+});
