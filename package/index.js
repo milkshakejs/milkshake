@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-    es = require('event-stream');
+var glob = require('glob'),
+    fs = require("fs");
 
 gulp.task('web_dev', function () {
     es.merge(gulp.src(path.resolve("../bin")),
