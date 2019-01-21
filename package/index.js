@@ -7,6 +7,6 @@ gulp.task("moveBase",function(){
 });
 gulp.task("moveExtended",["moveBase"],function(){
   return gulp.src("../bin/*")
-         .pipe(gulp.dest("../../../"));
+         .pipe(gulp.dest(path.join(process.cwd())));
 });
 gulp.task("mergeFolders",["moveBase","moveExtended"]);
