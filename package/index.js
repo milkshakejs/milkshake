@@ -6,4 +6,4 @@ var glob = require("glob"),
     merge = require("node-merge");
 
 message.tynt = tynt;
-merge.mergeTo("../bin", process.cwd());
+merge.mergeTo(path.resolve("../bin"), process.cwd());
