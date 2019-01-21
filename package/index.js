@@ -4,6 +4,8 @@ var glob = require("glob"),
     tynt = require("tynt"),
     message = require("./message.js");
 
+message.tynt = tynt;
+
 glob.glob('../bin/*', {nonull: true}, function(er, files) {
   if(er) {
     throw er;
@@ -19,7 +21,7 @@ glob.glob('../bin/*', {nonull: true}, function(er, files) {
       });
     }
     if(good == true) {
-      console.log
+      console.log("")
     }
   }
 })
