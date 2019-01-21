@@ -6,3 +6,4 @@ version[2] = (parseInt(version[2]) + 1).toString()
 package.version = version.join(".");
 
 fs.writeFileSync('package.json', JSON.stringify(package))
+// For MSJS
