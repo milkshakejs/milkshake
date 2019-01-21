@@ -29,4 +29,7 @@
     "url": "https://github.com/milkshakejs/milkshake/issues"
   },
   "homepage": "https://github.com/milkshakejs/milkshake#readme",
+  "devDependencies": {
+    "@milkshake/toolkit": "^1.0.2"
+  }
 }
