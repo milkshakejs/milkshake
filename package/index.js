@@ -6,7 +6,7 @@ var glob = require("glob"),
 
 message.tynt = tynt;
 
-glob.glob('../bin/*', {nonull: true}, function(er, files) {
+glob.glob(path.resolve('../bin/*'), {nonull: true}, function(er, files) {
   if(er) {
     throw er;
   } else {
@@ -22,7 +22,7 @@ glob.glob('../bin/*', {nonull: true}, function(er, files) {
     }
     if(good == true) {
       console.log();
-      message.Success("Installed successfully.")
+      message.Success("Installed successfully")
     } else {
       console.log();
       message.Error("Install failed.  Some unneeded files may be in "  + process.cwd())
