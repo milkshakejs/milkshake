@@ -1,2 +1,7 @@
-# milkshake
-Customizable and editable toolkit for making sweet applications.
+# Milkshake
+```
+npm i --save-dev @milkshake/milkshake
+```
+```javascript
+var milkshake = require("@milkshake/milkshake")
+```
