@@ -1,6 +1,6 @@
 {
   "name": "@milkshake/toolkit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Customizable and editable toolkit for developing sweet applications.",
   "main": "index.js",
   "scripts": {
