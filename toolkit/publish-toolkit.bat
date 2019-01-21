@@ -1,4 +1,4 @@
 @echo off
-cd toolkit
+node bump.js
 npm publish --access public
 cd ../
