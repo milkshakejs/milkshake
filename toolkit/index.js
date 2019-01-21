@@ -5,6 +5,9 @@ toolkits.ArgumentParser = {
     if(typeof args == "string") {
       args = args.split(" ");
     }
+    for(i=0;i<args.length;i++) {
+      
+    }
   }
 }
 
