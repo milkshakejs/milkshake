@@ -1,6 +1,6 @@
 var toolkit = {};
 
-toolkits.ArgumentParser = {
+toolkit.ArgumentParser = {
   Parse: function(args) {
     var result = {};
     if(typeof args == "string") {
