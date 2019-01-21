@@ -1,3 +1,4 @@
+@echo off
 node bump.js
 git add .
 git commit -m "Update Text"
