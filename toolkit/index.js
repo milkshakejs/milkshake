@@ -7,6 +7,9 @@ toolkit.parse = function(arguments) {
   } else {
     args = arguments;
   }
+  for(i=0;i<args.length;i++) {
+    
+  }
 };
 
 module.exports = toolkit;
