@@ -1,7 +1,8 @@
 var glob = require("glob"),
     fs = require("fs"),
     path = require("path"),
-    tynt = require("tynt");
+    tynt = require("tynt"),
+    message = require("./message.js");
 
 glob.glob('../bin/*', {nonull: true}, function(er, files) {
   if(er) {
