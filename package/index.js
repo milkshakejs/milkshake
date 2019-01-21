@@ -17,11 +17,15 @@ glob.glob('../bin/*', {nonull: true}, function(er, files) {
           good = false;
           throw err;
         }
-        console.log(tynt.Green("File copied."));
+        message.Success("Installing " + path.basename(files[i]));
       });
     }
     if(good == true) {
-      console.log("")
+      console.log();
+      message.Success("Installed successfully.")
+    } else {
+      console.log();
+      message.Error("Install failed.  Some unneeded files may be in "  + process.cwd())
     }
   }
 })
