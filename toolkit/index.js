@@ -1,6 +1,6 @@
 var toolkit = {};
 
-toolkit.parse = function(arguments) {
+toolkit.Argument = function(arguments) {
   var args;
   if(!typeof arguments == "string") {
     args = arguments.split(" ");
@@ -8,7 +8,9 @@ toolkit.parse = function(arguments) {
     args = arguments;
   }
   for(i=0;i<args.length;i++) {
-    
+    if(toolkit.Argument.prototype.Params[args[i]]) {
+      
+    }
   }
 };
 
