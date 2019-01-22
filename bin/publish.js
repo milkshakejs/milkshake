@@ -19,7 +19,8 @@ var release = process.argv[1] == "release";
 
 var safe = process.argv[2] == "safe";
 var testing = process.argv[2] == "testing";
-var safe = process.argv[2] == "unstable";
+var unstable = process.argv[2] == "unstable";
+var bug-fix = process.argv[2] == "bug-fix";
 
 if(safe) {
   if(release) {
@@ -32,5 +33,17 @@ if(safe) {
     cp.exec("git add . && git commit -m \"Release - Testing\" && git push origin master && npm publish --access public");
   } else if(debug) {
     cp.exec("git add . && git commit -m \"Debug - Testing\" && git push origin master && npm publish --access public");
+  }
+} else if(unstable) {
+  if(release) {
+    cp.exec("git add . && git commit -m \"Release - Unstable\" && git push origin master && npm publish --access public");
+  } else if(debug) {
+    cp.exec("git add . && git commit -m \"Debug - Unstable\" && git push origin master && npm publish --access public");
+  }
+} else if(bug-fix) {
+  if(release) {
+    cp.exec("git add . && git commit -m \"Release - Bug Fix\" && git push origin master && npm publish --access public");
+  } else if(debug) {
+    cp.exec("git add . && git commit -m \"Debug - Bug Fix\" && git push origin master && npm publish --access public");
   }
 }
