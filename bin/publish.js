@@ -14,12 +14,19 @@ var bump = function() {
 
 var fileName;
 
-var safe = process.argv[1] == "safe";
-var testing = process.argv[1] == "testing";
-var safe = process.argv[1] == "unstable";
+var debug = process.argv[1] == "debug";
+var release = process.argv[1] == "release";
+
+var safe = process.argv[2] == "safe";
+var testing = process.argv[2] == "testing";
+var safe = process.argv[2] == "unstable";
 
 if(safe) {
-  cp.exec("git add . && git commit -m \"Release - Safe\" && git push origin master && npm publish --access public")
+  if(release) {
+    cp.exec("git add . && git commit -m \"Release - Safe\" && git push origin master && npm publish --access public");
+  } else if(debug) {
+    cp.exec("git add . && git commit -m \"Debug - Safe\" && git push origin master && npm publish --access public");
+  }
 } else if(testing) {
-  cp.exec("git add . && git commit -m \"Release - Testing\" && git push origin master && npm publish --access public")
+  cp.exec("git add . && git commit -m \"Release - Testing\" && git push origin master && npm publish --access public");
 }
