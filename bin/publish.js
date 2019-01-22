@@ -28,5 +28,9 @@ if(safe) {
     cp.exec("git add . && git commit -m \"Debug - Safe\" && git push origin master && npm publish --access public");
   }
 } else if(testing) {
-  cp.exec("git add . && git commit -m \"Release - Testing\" && git push origin master && npm publish --access public");
+  if(release) {
+    cp.exec("git add . && git commit -m \"Release - Testing\" && git push origin master && npm publish --access public");
+  } else if(debug) {
+    cp.exec("git add . && git commit -m \"Debug - Testing\" && git push origin master && npm publish --access public");
+  }
 }
