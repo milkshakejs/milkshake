@@ -12,7 +12,7 @@ var bump = function() {
   // For MSJS
 }
 
-var fileName = "../publish-all";
+var fileName;
 
 var safe = process.argv[1] == "safe"; if(safe) {fileName = "./binsh/publish-safe"};
 var testing = process.argv[1] == "testing"; if(safe) {fileName = "./binsh/publish-testing"};
