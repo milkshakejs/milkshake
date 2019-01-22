@@ -18,4 +18,10 @@ var safe = process.argv[1] == "safe"; if(safe) fileName = "./binsh/publish-safe"
 var testing = process.argv[1] == "testing"; if(safe) fileName = "./binsh/publish-testing";
 var safe = process.argv[1] == "unstable"; if(safe) fileName = "./binsh/publish-unstable";
 
-cp.exec("")
+if(process.platform == "win32") {
+  cp.exec(fs.readFileSync(path.join("./binsh", fileName + ".bat")).split("\n").join(" && "));
+  bump()
+} else {
+  bump()
+  cp.exec(fs.readFileSync(path.join("./binsh", fileName + ".sh")).split("\n").join(" && "));
+}
