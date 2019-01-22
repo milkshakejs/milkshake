@@ -20,9 +20,7 @@ var release = process.argv[1] == "release";
 var safe = process.argv[2] == "safe";
 var testing = process.argv[2] == "testing";
 var unstable = process.argv[2] == "unstable";
-var bug-fix = process.argv[2] == "bug-fix";
-
-var no-bump
+var bug_fix = process.argv[2] == "bug-fix";
 
 if(safe) {
   if(release) {
