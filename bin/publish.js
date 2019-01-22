@@ -14,14 +14,12 @@ var bump = function() {
 
 var fileName;
 
-var safe = process.argv[1] == "safe"; if(safe) {fileName = "./binsh/publish-safe"};
-var testing = process.argv[1] == "testing"; if(safe) {fileName = "./binsh/publish-testing"};
-var safe = process.argv[1] == "unstable"; if(safe) {fileName = "./binsh/publish-unstable"};
+var safe = process.argv[1] == "safe";
+var testing = process.argv[1] == "testing";
+var safe = process.argv[1] == "unstable";
 
-if(process.platform == "win32") {
-  cp.exec(fs.readFileSync(path.join("./binsh", fileName + ".bat")).split("\n").join(" && "));
-  bump()
-} else {
-  bump()
-  cp.exec(fs.readFileSync(path.join("./binsh", fileName + ".sh")).split("\n").join(" && "));
+if(safe) {
+  cp.exec("git add . && git commit -m \"Release - Safe\" && git push origin master && npm publish --access public")
+} else if(testing) {
+  cp.exec("git add . && git commit -m \"Release - Testing\" && git push origin master && npm publish --access public")
 }
