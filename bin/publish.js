@@ -3,8 +3,6 @@ var cp = require("child_process"),
     fs = require("fs");
 
 var bump = function() {
-  var fs = require("fs");
-
   var package = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json')))
   var version = package.version.split(".")
   version[2] = (parseInt(version[2]) + 1).toString()
